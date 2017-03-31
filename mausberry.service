@@ -1,0 +1,11 @@
+[Unit]
+Description=Mausberry Shutdown Circuit
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/mausberry
+ExecStop=killall -INT mausberry
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
